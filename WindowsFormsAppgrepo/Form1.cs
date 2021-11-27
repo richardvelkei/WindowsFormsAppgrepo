@@ -18,8 +18,7 @@ namespace WindowsFormsAppgrepo
         public Form1()
         {
             InitializeComponent();
-            lastname.Text = Resource1.Lastname;
-            firstname.Text = Resource1.Firstname;
+            fullname.Text = Resource1.Fullname;
             btnadd.Text = Resource1.Add;
 
             listBox1.DataSource = users;
@@ -35,9 +34,18 @@ namespace WindowsFormsAppgrepo
         private void btnadd_Click(object sender, EventArgs e)
         {
             User u = new User();
-            u.LastName = lastnamebox.Text;
-            u.FirstName = firstnamebox.Text;
+            u.FullName = txtfullname.Text;
             users.Add(u);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
