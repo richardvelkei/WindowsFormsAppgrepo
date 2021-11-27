@@ -30,11 +30,11 @@ namespace WindowsFormsAppgrepo
         private void InitializeComponent()
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.firstname = new System.Windows.Forms.Label();
-            this.lastname = new System.Windows.Forms.Label();
-            this.firstnamebox = new System.Windows.Forms.TextBox();
-            this.lastnamebox = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
+            this.fullname = new System.Windows.Forms.Label();
+            this.txtfullname = new System.Windows.Forms.TextBox();
+            this.fajlbairas = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -47,41 +47,9 @@ namespace WindowsFormsAppgrepo
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // firstname
-            // 
-            this.firstname.AutoSize = true;
-            this.firstname.Location = new System.Drawing.Point(195, 32);
-            this.firstname.Name = "firstname";
-            this.firstname.Size = new System.Drawing.Size(70, 17);
-            this.firstname.TabIndex = 1;
-            this.firstname.Text = "Firstname";
-            // 
-            // lastname
-            // 
-            this.lastname.AutoSize = true;
-            this.lastname.Location = new System.Drawing.Point(195, 75);
-            this.lastname.Name = "lastname";
-            this.lastname.Size = new System.Drawing.Size(70, 17);
-            this.lastname.TabIndex = 2;
-            this.lastname.Text = "Lastname";
-            // 
-            // firstnamebox
-            // 
-            this.firstnamebox.Location = new System.Drawing.Point(271, 29);
-            this.firstnamebox.Name = "firstnamebox";
-            this.firstnamebox.Size = new System.Drawing.Size(133, 22);
-            this.firstnamebox.TabIndex = 3;
-            // 
-            // lastnamebox
-            // 
-            this.lastnamebox.Location = new System.Drawing.Point(271, 72);
-            this.lastnamebox.Name = "lastnamebox";
-            this.lastnamebox.Size = new System.Drawing.Size(133, 22);
-            this.lastnamebox.TabIndex = 4;
-            // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(198, 117);
+            this.btnadd.Location = new System.Drawing.Point(198, 66);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(206, 33);
             this.btnadd.TabIndex = 5;
@@ -89,16 +57,54 @@ namespace WindowsFormsAppgrepo
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
+            // fullname
+            // 
+            this.fullname.AutoSize = true;
+            this.fullname.Location = new System.Drawing.Point(195, 24);
+            this.fullname.Name = "fullname";
+            this.fullname.Size = new System.Drawing.Size(46, 17);
+            this.fullname.TabIndex = 6;
+            this.fullname.Text = "label1";
+            this.fullname.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtfullname
+            // 
+            this.txtfullname.Location = new System.Drawing.Point(276, 24);
+            this.txtfullname.Name = "txtfullname";
+            this.txtfullname.Size = new System.Drawing.Size(128, 22);
+            this.txtfullname.TabIndex = 7;
+            this.txtfullname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // fajlbairas
+            // 
+            this.fajlbairas.Location = new System.Drawing.Point(198, 105);
+            this.fajlbairas.Name = "fajlbairas";
+            this.fajlbairas.Size = new System.Drawing.Size(206, 33);
+            this.fajlbairas.TabIndex = 8;
+            this.fajlbairas.Text = "button1";
+            this.fajlbairas.UseVisualStyleBackColor = true;
+            this.fajlbairas.Click += new System.EventHandler(this.fajlbairas_Click);
+            // 
+            // delete
+            // 
+            this.delete.Location = new System.Drawing.Point(198, 144);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(206, 33);
+            this.delete.TabIndex = 9;
+            this.delete.Text = "button1";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 384);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.fajlbairas);
+            this.Controls.Add(this.txtfullname);
+            this.Controls.Add(this.fullname);
             this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.lastnamebox);
-            this.Controls.Add(this.firstnamebox);
-            this.Controls.Add(this.lastname);
-            this.Controls.Add(this.firstname);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -110,11 +116,11 @@ namespace WindowsFormsAppgrepo
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label firstname;
-        private System.Windows.Forms.Label lastname;
-        private System.Windows.Forms.TextBox firstnamebox;
-        private System.Windows.Forms.TextBox lastnamebox;
         private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.Label fullname;
+        private System.Windows.Forms.TextBox txtfullname;
+        private System.Windows.Forms.Button fajlbairas;
+        private System.Windows.Forms.Button delete;
     }
 }
 

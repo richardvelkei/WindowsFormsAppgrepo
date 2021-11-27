@@ -70,20 +70,29 @@ namespace WindowsFormsAppgrepo {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Utónév.
+        ///   Looks up a localized string similar to Törlés.
         /// </summary>
-        internal static string Firstname {
+        internal static string delete {
             get {
-                return ResourceManager.GetString("Firstname", resourceCulture);
+                return ResourceManager.GetString("delete", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vezetéknév.
+        ///   Looks up a localized string similar to Fájlba mentés.
         /// </summary>
-        internal static string Lastname {
+        internal static string fajlbairas {
             get {
-                return ResourceManager.GetString("Lastname", resourceCulture);
+                return ResourceManager.GetString("fajlbairas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teljes név.
+        /// </summary>
+        internal static string Fullname {
+            get {
+                return ResourceManager.GetString("Fullname", resourceCulture);
             }
         }
     }
