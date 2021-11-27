@@ -13,7 +13,7 @@ namespace WindowsFormsAppgrepo
 {
     public partial class Form1 : Form
     {
-        BindigList<User> users = new BindigList<User>();
+        BindingList<User> users = new BindingList<User>();
 
         public Form1()
         {
@@ -22,12 +22,22 @@ namespace WindowsFormsAppgrepo
             firstname.Text = Resource1.Firstname;
             btnadd.Text = Resource1.Add;
 
-           
+            listBox1.DataSource = users;
+            listBox1.ValueMember = "ID";
+            listBox1.DisplayMember = "FullName";
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            User u = new User();
+            u.LastName = lastnamebox.Text;
+            u.FirstName = firstnamebox.Text;
+            users.Add(u);
         }
     }
 }

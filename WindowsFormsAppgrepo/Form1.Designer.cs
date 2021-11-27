@@ -32,8 +32,8 @@ namespace WindowsFormsAppgrepo
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.firstname = new System.Windows.Forms.Label();
             this.lastname = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.firstnamebox = new System.Windows.Forms.TextBox();
+            this.lastnamebox = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,19 +65,19 @@ namespace WindowsFormsAppgrepo
             this.lastname.TabIndex = 2;
             this.lastname.Text = "Lastname";
             // 
-            // textBox1
+            // firstnamebox
             // 
-            this.textBox1.Location = new System.Drawing.Point(271, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 22);
-            this.textBox1.TabIndex = 3;
+            this.firstnamebox.Location = new System.Drawing.Point(271, 29);
+            this.firstnamebox.Name = "firstnamebox";
+            this.firstnamebox.Size = new System.Drawing.Size(133, 22);
+            this.firstnamebox.TabIndex = 3;
             // 
-            // textBox2
+            // lastnamebox
             // 
-            this.textBox2.Location = new System.Drawing.Point(271, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 22);
-            this.textBox2.TabIndex = 4;
+            this.lastnamebox.Location = new System.Drawing.Point(271, 72);
+            this.lastnamebox.Name = "lastnamebox";
+            this.lastnamebox.Size = new System.Drawing.Size(133, 22);
+            this.lastnamebox.TabIndex = 4;
             // 
             // btnadd
             // 
@@ -87,6 +87,7 @@ namespace WindowsFormsAppgrepo
             this.btnadd.TabIndex = 5;
             this.btnadd.Text = "button1";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // Form1
             // 
@@ -94,8 +95,8 @@ namespace WindowsFormsAppgrepo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 384);
             this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lastnamebox);
+            this.Controls.Add(this.firstnamebox);
             this.Controls.Add(this.lastname);
             this.Controls.Add(this.firstname);
             this.Controls.Add(this.listBox1);
@@ -111,8 +112,8 @@ namespace WindowsFormsAppgrepo
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label firstname;
         private System.Windows.Forms.Label lastname;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox firstnamebox;
+        private System.Windows.Forms.TextBox lastnamebox;
         private System.Windows.Forms.Button btnadd;
     }
 }
