@@ -33,6 +33,7 @@ namespace WindowsFormsAppgrepo
             this.btnadd = new System.Windows.Forms.Button();
             this.fullname = new System.Windows.Forms.Label();
             this.txtfullname = new System.Windows.Forms.TextBox();
+            this.fajlbairas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -73,11 +74,22 @@ namespace WindowsFormsAppgrepo
             this.txtfullname.TabIndex = 7;
             this.txtfullname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // fajlbairas
+            // 
+            this.fajlbairas.Location = new System.Drawing.Point(198, 105);
+            this.fajlbairas.Name = "fajlbairas";
+            this.fajlbairas.Size = new System.Drawing.Size(206, 33);
+            this.fajlbairas.TabIndex = 8;
+            this.fajlbairas.Text = "button1";
+            this.fajlbairas.UseVisualStyleBackColor = true;
+            this.fajlbairas.Click += new System.EventHandler(this.fajlbairas_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 384);
+            this.Controls.Add(this.fajlbairas);
             this.Controls.Add(this.txtfullname);
             this.Controls.Add(this.fullname);
             this.Controls.Add(this.btnadd);
@@ -95,6 +107,7 @@ namespace WindowsFormsAppgrepo
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Label fullname;
         private System.Windows.Forms.TextBox txtfullname;
+        private System.Windows.Forms.Button fajlbairas;
     }
 }
 

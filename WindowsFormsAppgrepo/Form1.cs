@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace WindowsFormsAppgrepo
             InitializeComponent();
             fullname.Text = Resource1.Fullname;
             btnadd.Text = Resource1.Add;
+            fajlbairas.Text = Resource1.fajlbairas;
 
             listBox1.DataSource = users;
             listBox1.ValueMember = "ID";
@@ -46,6 +48,21 @@ namespace WindowsFormsAppgrepo
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void fajlbairas_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog()==DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                {
+                    foreach(User item in users)
+                    {
+                        sw.WriteLine(item.ID + ";" + item.FullName);
+                    }
+                }
+            }
         }
     }
 }

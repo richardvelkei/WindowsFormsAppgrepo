@@ -70,6 +70,15 @@ namespace WindowsFormsAppgrepo {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fájlba mentés.
+        /// </summary>
+        internal static string fajlbairas {
+            get {
+                return ResourceManager.GetString("fajlbairas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Teljes név.
         /// </summary>
         internal static string Fullname {
