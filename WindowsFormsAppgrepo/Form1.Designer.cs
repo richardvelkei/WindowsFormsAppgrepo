@@ -34,6 +34,7 @@ namespace WindowsFormsAppgrepo
             this.fullname = new System.Windows.Forms.Label();
             this.txtfullname = new System.Windows.Forms.TextBox();
             this.fajlbairas = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -84,11 +85,22 @@ namespace WindowsFormsAppgrepo
             this.fajlbairas.UseVisualStyleBackColor = true;
             this.fajlbairas.Click += new System.EventHandler(this.fajlbairas_Click);
             // 
+            // delete
+            // 
+            this.delete.Location = new System.Drawing.Point(198, 144);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(206, 33);
+            this.delete.TabIndex = 9;
+            this.delete.Text = "button1";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 384);
+            this.Controls.Add(this.delete);
             this.Controls.Add(this.fajlbairas);
             this.Controls.Add(this.txtfullname);
             this.Controls.Add(this.fullname);
@@ -108,6 +120,7 @@ namespace WindowsFormsAppgrepo
         private System.Windows.Forms.Label fullname;
         private System.Windows.Forms.TextBox txtfullname;
         private System.Windows.Forms.Button fajlbairas;
+        private System.Windows.Forms.Button delete;
     }
 }
 

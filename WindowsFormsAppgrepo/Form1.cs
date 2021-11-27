@@ -22,6 +22,7 @@ namespace WindowsFormsAppgrepo
             fullname.Text = Resource1.Fullname;
             btnadd.Text = Resource1.Add;
             fajlbairas.Text = Resource1.fajlbairas;
+            delete.Text = Resource1.delete;
 
             listBox1.DataSource = users;
             listBox1.ValueMember = "ID";
@@ -63,6 +64,12 @@ namespace WindowsFormsAppgrepo
                     }
                 }
             }
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            User valasztottuser = (User)listBox1.SelectedItem;
+            users.Remove(valasztottuser);
         }
     }
 }
