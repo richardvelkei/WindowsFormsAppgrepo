@@ -70,16 +70,7 @@ namespace WindowsFormsAppgrepo {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string Asd {
-            get {
-                return ResourceManager.GetString("Asd", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Kresztnév.
+        ///   Looks up a localized string similar to Utónév.
         /// </summary>
         internal static string Firstname {
             get {
