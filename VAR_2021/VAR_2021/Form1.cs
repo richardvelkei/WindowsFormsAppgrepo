@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace VAR_2021
         PortfolioEntities context = new PortfolioEntities();
         List<Tick> ticks = new List<Tick>(); 
         List<PortfolioItem> Portfolio = new List<PortfolioItem>();
+        List<Decimal> Nyeresegek;
 
         public Form1()
         {
@@ -25,7 +27,7 @@ namespace VAR_2021
 
             CreatePortfolio();
 
-            List<decimal> Nyeresegek = new List<decimal>();
+            Nyeresegek = new List<decimal>();
             int intervalum = 30;
             DateTime kezdoDatum = (from x in ticks select x.TradingDay).Min();
             DateTime zaroDatum = new DateTime(2016, 12, 30);
@@ -78,6 +80,26 @@ namespace VAR_2021
 
         }
 
-        
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog()== DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                {
+                    int counter = 1;
+                    foreach (decimal item in Nyeresegek)
+                    {
+                        sw.WriteLine(string.Format("{0};{1}", counter, item));
+                        counter++;
+                    }
+                    for (int i = 0; i < Nyeresegek.Count; i++)
+                    {
+                        sw.WriteLine(string.Format("{0};{1}", i+1, Nyeresegek[i]));
+
+                    }
+                }
+            }
+        }
     }
 }
