@@ -53,6 +53,7 @@ namespace Olympics
             this.cbxEv.Name = "cbxEv";
             this.cbxEv.Size = new System.Drawing.Size(121, 24);
             this.cbxEv.TabIndex = 2;
+            this.cbxEv.SelectedIndexChanged += new System.EventHandler(this.cbxEv_SelectedIndexChanged);
             // 
             // dataGridView1
             // 

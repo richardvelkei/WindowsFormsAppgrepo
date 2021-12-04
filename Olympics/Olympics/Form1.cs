@@ -6,9 +6,11 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Olympics
 {
@@ -80,20 +82,69 @@ namespace Olympics
         {
 
         }
-
+        // javítani!
+        Excel.Application xlApp;
+        Excel.Workbook xlWB;
+        Excel.Worksheet xlSheets;
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
             try
             {
+                xlApp = new Excel.Application();
+                xlWB = xlApp.Workbooks.Add(Missing.Value);
+                xlSheets = xlWB.ActiveSheet;
 
+                ExcelFeltolt();
+
+                xlApp.Visible = true;
+                xlApp.UserControl = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.Message);
+                xlWB.Close(false, Type.Missing, Type.Missing);
+                xlApp.Quit();
+                xlWB = null;
+                xlWB = null;
             }
 
+        }
+
+        private void ExcelFeltolt()
+        {
+            var headers = new string[]
+            {
+             "Helyezés",
+             "Ország",
+             "Arany",
+             "Ezüst",
+             "Bronz"
+            };
+
+            for (int i = 0; i < headers.Length; i++)
+            {
+                xlSheets.Cells[1, i + 1] = headers[i];
+            }
+
+            var filteredResult = from x in results where x.Year == (int)cbxEv.SelectedItem orderby x.Position select x;
+            int aktsor = 2;
+            foreach (var item in filteredResult)
+            {
+                xlSheets.Cells[aktsor, 1] = item.Position;
+                xlSheets.Cells[aktsor, 2] = item.Country;
+                for (int i = 0; i < 3; i++)
+                {
+                    xlSheets.Cells[aktsor, 3 + i] = item.Medals[i];
+                }
+                aktsor++;
+            }
+        }
+
+        private void cbxEv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var filteredResult = from x in results where x.Year == (int)cbxEv.SelectedItem select x;
+            dataGridView1.DataSource = filteredResult.ToList();
         }
     }
 }
