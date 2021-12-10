@@ -36,13 +36,14 @@ namespace ProgramTervezesiMintak_2
             this.btnBall = new System.Windows.Forms.Button();
             this.btnCar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBallColor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(-2, 150);
+            this.panel1.Location = new System.Drawing.Point(-2, 225);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 300);
+            this.panel1.Size = new System.Drawing.Size(802, 225);
             this.panel1.TabIndex = 0;
             // 
             // createTimer
@@ -80,17 +81,28 @@ namespace ProgramTervezesiMintak_2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-3, 68);
+            this.label1.Location = new System.Drawing.Point(12, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 21);
+            this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Coming next";
+            // 
+            // btnBallColor
+            // 
+            this.btnBallColor.Location = new System.Drawing.Point(303, 0);
+            this.btnBallColor.Name = "btnBallColor";
+            this.btnBallColor.Size = new System.Drawing.Size(105, 39);
+            this.btnBallColor.TabIndex = 4;
+            this.btnBallColor.Text = "Színválasztó";
+            this.btnBallColor.UseVisualStyleBackColor = true;
+            this.btnBallColor.Click += new System.EventHandler(this.btnBallColor_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBallColor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCar);
             this.Controls.Add(this.btnBall);
@@ -110,6 +122,7 @@ namespace ProgramTervezesiMintak_2
         private System.Windows.Forms.Button btnBall;
         private System.Windows.Forms.Button btnCar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBallColor;
     }
 }
 

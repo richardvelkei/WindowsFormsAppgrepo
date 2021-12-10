@@ -24,6 +24,13 @@ namespace ProgramTervezesiMintak_2.Entities
             DrawImage(e.Graphics);
         }*/
 
+        public SolidBrush BallColor { get; private set; }
+
+        public Ball(Color kivantszin)
+        {
+            BallColor = new SolidBrush(kivantszin);
+        }
+
         protected override void DrawImage(Graphics g)
         {
             g.FillEllipse(new SolidBrush(Color.Red), 0, 0, Width, Height);
